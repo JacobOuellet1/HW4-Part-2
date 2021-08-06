@@ -1,0 +1,67 @@
+<!--
+File: index.html
+GUI Assignment: Homework 4
+Jacob Ouellet, UMass Lowell Computer Science, jacob_ouellet@student.uml.edu
+Copyright (c) 2021 by Jacob Ouellet. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by Jacob Ouellet on Aug 5, 2021 at 7:06 PM
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Multiplication Table</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/black-tie/jquery-ui.css">
+  </head>
+  <body>
+    <header>
+        <h1>Multiplication Table</h1>
+        <p>The index values must be integers between -100 and 100.</p> <!-- table instructions-->
+    </header>
+    <div id="form">
+        <form id="input_form" action="">  <!-- input form-->
+            <div class="group">
+                <label for="rowstart">Row Start Index:</label>  <!-- get row start index-->
+                <input type="text" id="rowstart" name="rowstart" value="0">
+                <div id="slide"></div>
+                <label for="rowend">Row End Index:</label> <!-- get row end index-->
+                <input type="text" id="rowend" name="rowend" value="0">
+                <div id="slide2"></div>
+            </div>
+            <div class="group">
+                <label for="columnstart">Column Start Index:</label>    <!-- get column start index-->
+                <input type="text" id="columnstart" name="columnstart" value="0">
+                <div id="slide3"></div>
+                <label for="columnend">Column End Index:</label> <!-- get column end index-->
+                <input type="text" id="columnend" name="columnend" value="0">
+                <div id="slide4"></div>
+            </div>
+        </form> 
+    </div>
+    <div id="container">
+        <table id="multTable">  <!-- starting empty table-->
+            <tr>
+                <td></td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+        </table>
+    </div>
+    <div id="btn">  <!-- button used to save the table and create a new tab containing that table -->
+        <button id="saveTable">save table</button>  <!-- button to submit form info and build table-->
+    </div>  
+    <div id="myTabs">   <!-- div container for the tabs. tab information and navigation stored in ul and tables stored in divs within this div-->
+        <ul>    
+        </ul>
+    </div>
+    <script src="js/script.js"></script>    <!-- javascript reference-->
+  </body>
+</html>
